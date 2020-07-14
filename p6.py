@@ -21,14 +21,14 @@ class App(MDApp):
         if self.username.text is "":
             check_string = 'Please enter a username'
         else:
-            check_string = self.username.text+' does not exist'
+            check_string = self.username.text + ' does not exist'
 
         close = MDFlatButton(text='Close', on_release=self.close_dia)
         more_button = MDFlatButton(text='More')
         self.dia = MDDialog(text=check_string,
-                       title='Username check',
-                       size_hint=(0.7, 1),
-                       buttons=[close, more_button])
+                            title='Username check',
+                            size_hint=(0.7, 1),
+                            buttons=[close, more_button])
         self.dia.open()
 
     def close_dia(self, obj):
